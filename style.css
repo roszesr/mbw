@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menu-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.menu-button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: #D32F2F;
+    color: white;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #D32F2F;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.facility-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.facility-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.facility-title {
+    font-size: 20px;
+    color: #333;
+    margin-right: auto;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    color: #FFB800;
+}
+
+.stars {
+    color: #FFB800;
+    margin-right: 5px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.features-list {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.features-list li {
+    margin: 5px 0;
+    color: #666;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.facility-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rating-badge {
+    background: #FFB800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+/* New Rating Styles */
+.rating-system {
+    margin: 15px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    cursor: pointer;
+    font-size: 30px;
+    color: #ddd;
+    transition: color 0.2s;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #FFB800;
+}
+
+.rating-form {
+    margin-top: 15px;
+}
+
+.rating-comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-rating {
+    background: #D32F2F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-rating:hover {
+    background: #B71C1C;
+}
+
+.rating-summary {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.user-ratings {
+    margin-top: 15px;
+}
+
+.rating-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.rating-content {
+    color: #333;
+    line-height: 1.5;
+}
+
+.show-ratings-btn {
+    background: none;
+    border: none;
+    color: #D32F2F;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: underline;
+}

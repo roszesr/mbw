@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBW Facilities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div id="main-menu" class="page active">
+        <div class="header">
+            <img src="images/MBW.png" alt="MBW Logo" class="logo">
+        </div>
+        <div class="menu-container">
+            <button class="menu-button" onclick="showPage('facilities-menu')">Daftar Fasilitas</button>
+            <button class="menu-button" onclick="showPage('description')">Deskripsi Lokasi</button>
+            <button class="menu-button" onclick="exitApp()">Keluar</button>
+        </div>
+    </div>
+
+    <!-- Facilities Menu -->
+    <div id="facilities-menu" class="page">
+        <button class="back-button" onclick="showPage('main-menu')">Kembali</button>
+        <div class="header">
+            <h2>Daftar Fasilitas</h2>
+        </div>
+        <div class="menu-container">
+            <button class="menu-button" onclick="showPage('food-area')">Tempat Makan</button>
+            <button class="menu-button" onclick="showPage('sport-area')">Area Olahraga</button>
+            <button class="menu-button" onclick="showPage('kids-area')">Area Bermain Anak</button>
+            <button class="menu-button" onclick="showPage('photo-spots')">Spot Foto</button>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div id="description" class="page">
+        <button class="back-button" onclick="showPage('main-menu')">Kembali</button>
+        <div class="facility-section">
+            <div class="facility-card">
+                <h2 class="facility-title">Tentang MBW</h2>
+                <img src="images/MBW.png" alt="MBW Overview" class="description-image">
+                <p class="description">
+                    MBW adalah destinasi rekreasi terpadu yang menyediakan berbagai fasilitas untuk seluruh keluarga. 
+                    Dengan konsep modern dan nyaman, kami menghadirkan pengalaman bermain, bersantai, dan berolahraga 
+                    yang memorable untuk semua pengunjung. Lokasi strategis dan suasana yang asri menjadikan MBW sebagai 
+                    pilihan tepat untuk menghabiskan waktu bersama keluarga dan teman.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Food Area -->
+    <div id="food-area" class="page">
+        <button class="back-button" onclick="showPage('facilities-menu')">Kembali</button>
+        <div class="facility-section">
+            <!-- Warung Kopi Sun -->
+            <div class="facility-card" data-facility-id="warung-kopi-sun">
+                <div class="facility-header">
+                    <h2 class="facility-title">Warung Kopi Sun</h2>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-badge">4.2/5</span>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <img src="images/tmpamkg.jpeg" alt="Warung Kopi Sun 1">
+                    <img src="images/mknan.jpeg" alt="Warung Kopi Sun 2">
+                    <img src="images/tmpamkg.jpeg" alt="Warung Kopi Sun 3">
+                </div>
+                <ul class="features-list">
+                    <li>Kopi premium dengan biji pilihan</li>
+                    <li>Menu makanan ringan dan berat</li>
+                    <li>Area indoor dan outdoor</li>
+                    <li>Free WiFi</li>
+                    <li>Buka: 08.00 - 22.00</li>
+                </ul>
+                <div class="rating-system">
+                    <h3>Beri Rating</h3>
+                    <form class="rating-form">
+                        <div class="rating-stars">
+                            <input type="radio" id="star5-wks" name="rating" value="5">
+                            <label for="star5-wks">★</label>
+                            <input type="radio" id="star4-wks" name="rating" value="4">
+                            <label for="star4-wks">★</label>
+                            <input type="radio" id="star3-wks" name="rating" value="3">
+                            <label for="star3-wks">★</label>
+                            <input type="radio" id="star2-wks" name="rating" value="2">
+                            <label for="star2-wks">★</label>
+                            <input type="radio" id="star1-wks" name="rating" value="1">
+                            <label for="star1-wks">★</label>
+                        </div>
+                        <textarea class="rating-comment" placeholder="Bagikan pengalaman Anda..." required></textarea>
+                        <button type="submit" class="submit-rating">Kirim Rating</button>
+                    </form>
+                    <div class="rating-summary">
+                        <button class="show-ratings-btn">Lihat Semua Rating</button>
+                        <div class="user-ratings"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kedai Aneka Mie -->
+            <div class="facility-card" data-facility-id="kedai-aneka-mie">
+                <div class="facility-header">
+                    <h2 class="facility-title">Kedai Aneka Mie</h2>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-badge">4.8/5</span>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <img src="images/mknn1.jpeg" alt="Kedai Aneka Mie 1">
+                    <img src="images/mknn2.jpeg" alt="Kedai Aneka Mie 2">
+                    <img src="images/mknn3.jpg" alt="Kedai Aneka Mie 3">
+                </div>
+                <ul class="features-list">
+                    <li>Semua jenis mie</li>
+                    <li>Area keluarga</li>
+                    <li>Parkir luas</li>
+                    <li>Buka: 10.00 - 21.00</li>
+                </ul>
+                <div class="rating-system">
+                    <h3>Beri Rating</h3>
+                    <form class="rating-form">
+                        <div class="rating-stars">
+                            <input type="radio" id="star5-kam" name="rating" value="5">
+                            <label for="star5-kam">★</label>
+                            <input type="radio" id="star4-kam" name="rating" value="4">
+                            <label for="star4-kam">★</label>
+                            <input type="radio" id="star3-kam" name="rating" value="3">
+                            <label for="star3-kam">★</label>
+                            <input type="radio" id="star2-kam" name="rating" value="2">
+                            <label for="star2-kam">★</label>
+                            <input type="radio" id="star1-kam" name="rating" value="1">
+                            <label for="star1-kam">★</label>
+                        </div>
+                        <textarea class="rating-comment" placeholder="Bagikan pengalaman Anda..." required></textarea>
+                        <button type="submit" class="submit-rating">Kirim Rating</button>
+                    </form>
+                    <div class="rating-summary">
+                        <button class="show-ratings-btn">Lihat Semua Rating</button>
+                        <div class="user-ratings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sport Area -->
+    <div id="sport-area" class="page">
+        <button class="back-button" onclick="showPage('facilities-menu')">Kembali</button>
+        <div class="facility-section">
+            <div class="facility-card" data-facility-id="fitness-outdoor">
+                <div class="facility-header">
+                    <h2 class="facility-title">Area Fitness Outdoor</h2>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-badge">4.5/5</span>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <img src="images/olahraga.jpeg" alt="Fitness 1">
+                    <img src="images/olahraga1.jpeg" alt="Fitness 2">
+                    <img src="images/olahraga.jpeg" alt="Fitness 3">
+                </div>
+                <ul class="features-list">
+                    <li>Peralatan fitness lengkap</li>
+                    <li>Area outdoor yang luas</li>
+                    <li>Instruktur berpengalaman</li>
+                    <li>Buka: 06.00 - 20.00</li>
+                </ul>
+                <div class="rating-system">
+                    <h3>Beri Rating</h3>
+                    <form class="rating-form">
+                        <div class="rating-stars">
+                            <input type="radio" id="star5-fitness" name="rating" value="5">
+                            <label for="star5-fitness">★</label>
+                            <input type="radio" id="star4-fitness" name="rating" value="4">
+                            <label for="star4-fitness">★</label>
+                            <input type="radio" id="star3-fitness" name="rating" value="3">
+                            <label for="star3-fitness">★</label>
+                            <input type="radio" id="star2-fitness" name="rating" value="2">
+                            <label for="star2-fitness">★</label>
+                            <input type="radio" id="star1-fitness" name="rating" value="1">
+                            <label for="star1-fitness">★</label>
+                        </div>
+                        <textarea class="rating-comment" placeholder="Bagikan pengalaman Anda..." required></textarea>
+                        <button type="submit" class="submit-rating">Kirim Rating</button>
+                    </form>
+                    <div class="rating-summary">
+                        <button class="show-ratings-btn">Lihat Semua Rating</button>
+                        <div class="user-ratings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kids Area -->
+    <div id="kids-area" class="page">
+        <button class="back-button" onclick="showPage('facilities-menu')">Kembali</button>
+        <div class="facility-section">
+            <div class="facility-card" data-facility-id="kids-playground">
+                <div class="facility-header">
+                    <h2 class="facility-title">Taman Bermain Anak</h2>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-badge">4.7/5</span>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <img src="images/anak2.jpeg" alt="Playground 1">
+                    <img src="images/areaanak.jpeg" alt="Playground 2">
+                    <img src="images/areaanak2.jpeg" alt="Playground 3">
+                </div>
+                <ul class="features-list">
+                    <li>Peralatan bermain modern</li>
+                    <li>Area bermain indoor & outdoor</li>
+                    <li>Pengawas terlatih</li>
+                    <li>Fasilitas P3K</li>
+                    <li>Buka: 09.00 - 18.00</li>
+                </ul>
+                <div class="rating-system">
+                    <h3>Beri Rating</h3>
+                    <form class="rating-form">
+                        <div class="rating-stars">
+                            <input type="radio" id="star5-kids" name="rating" value="5">
+                            <label for="star5-kids">★</label>
+                            <input type="radio" id="star4-kids" name="rating" value="4">
+                            <label for="star4-kids">★</label>
+                            <input type="radio" id="star3-kids" name="rating" value="3">
+                            <label for="star3-kids">★</label>
+                            <input type="radio" id="star2-kids" name="rating" value="2">
+                            <label for="star2-kids">★</label>
+                            <input type="radio" id="star1-kids" name="rating" value="1">
+                            <label for="star1-kids">★</label>
+                        </div>
+                        <textarea class="rating-comment" placeholder="Bagikan pengalaman Anda..." required></textarea>
+                        <button type="submit" class="submit-rating">Kirim Rating</button>
+                    </form>
+                    <div class="rating-summary">
+                        <button class="show-ratings-btn">Lihat Semua Rating</button>
+                        <div class="user-ratings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Spots -->
+    <div id="photo-spots" class="page">
+        <button class="back-button" onclick="showPage('facilities-menu')">Kembali</button>
+        <div class="facility-section">
+            <div class="facility-card" data-facility-id="photo-spots">
+                <div class="facility-header">
+                    <h2 class="facility-title">Spot Foto Instagramable</h2>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-badge">4.9/5</span>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <img src="images/spotfoto.jpeg" alt="Photo Spot 1">
+                    <img src="images/spotfoto1.jpeg" alt="Photo Spot 2">
+                    <img src="images/foto.jpeg" alt="Photo Spot 3">
+                </div>
+                <ul class="features-list">
+                    <li>10+ spot foto unik</li>
+                    <li>Pencahayaan natural</li>
+                    <li>Background aesthetic</li>
+                    <li>Props foto tersedia</li>
+                    <li>Photographer profesional (weekend)</li>
+                </ul>
+                <div class="rating-system">
+                    <h3>Beri Rating</h3>
+                    <form class="rating-form">
+                        <div class="rating-stars">
+                            <input type="radio" id="star5-photo" name="rating" value="5">
+                            <label for="star5-photo">★</label>
+                            <input type="radio" id="star4-photo" name="rating" value="4">
+                            <label for="star4-photo">★</label>
+                            <input type="radio" id="star3-photo" name="rating" value="3">
+                            <label for="star3-photo">★</label>
+                            <input type="radio" id="star2-photo" name="rating" value="2">
+                            <label for="star2-photo">★</label>
+                            <input type="radio" id="star1-photo" name="rating" value="1">
+                            <label for="star1-photo">★</label>
+                        </div>
+                        <textarea class="rating-comment" placeholder="Bagikan pengalaman Anda..." required></textarea>
+                        <button type="submit" class="submit-rating">Kirim Rating</button>
+                    </form>
+                    <div class="rating-summary">
+                        <button class="show-ratings-btn">Lihat Semua Rating</button>
+                        <div class="user-ratings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
